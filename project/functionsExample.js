@@ -10,7 +10,7 @@ function setup() {
  
  function eyes(x,y) {
    //left eye
-     fill("white")
+     fill("red")
     ellipse(x, y, 80, 50);
      fill("black")
      ellipse(x-5,y,30,30)

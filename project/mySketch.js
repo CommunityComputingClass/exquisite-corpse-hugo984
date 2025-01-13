@@ -1,24 +1,36 @@
 function setup() {
   createCanvas(500, 500);
-  
-
-}
-
-function draw() {
-  background(84,169,209);
+  background("violet");
   fill(255);
   rect(0, 0, 75, 20);
   
-  //text showing mouse coordinates
+  eyes(250,250);
+  mouth(250,250);
+}
+
+function draw() { 
   fill(255, 0, 0);
   text("("+mouseX + ", " + mouseY+")", 5, 15);
+}
+
+function eyes(x,y) {
+ fill("green")
+ellipse(x-50, y-50, 50, 35)
+ellipse(x+50, y-50, 50, 35)
+ fill("purple")
+circle(x-50, y-50, 30)
+circle(x+50, y-50, 30)
+ fill("black")
+circle(x-50, y-50, 15)
+circle(x+50, y-50, 15)
+ fill("white")
+circle(x-50, y-52, 5)
+circle(x+50, y-52, 5)
+}
+
+function mouth(x,y){
   fill("white")
-  arc(150, 150, 80, 80, 0, PI );
-  arc(275, 150, 80, 80, 0, PI );
-  fill("brown")
-  circle(150, 170, 30)
-  circle(275, 170, 30)
+arc(x, y, 150, 85, 0, PI )
   fill("black")
-  circle(275, 170, 15)
-  circle(150, 170, 15)
+line(x,y+25,x-75,y)
 }
