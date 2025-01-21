@@ -1,3 +1,6 @@
+let color = "red"; 
+let colors = ["red", "green", "yellow", "purple"];
+
 function setup() {
     createCanvas(500, 500);
     background("violet");
@@ -8,14 +11,15 @@ function setup() {
     beak(250,250);
   }
   
-  function draw() { 
+  function draw() {
+
   }
   
   function eyes(x,y) {
-   fill("green")
+    fill(colors[1]);
   ellipse(x-50, y-50, 50, 35)
   ellipse(x+50, y-50, 50, 35)
-   fill("purple")
+  fill(colors[3])
   circle(x-50, y-50, 30)
   circle(x+50, y-50, 30)
    fill("black")
