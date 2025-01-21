@@ -5,12 +5,10 @@ function setup() {
   rect(0, 0, 75, 20);
   
   eyes(250,250);
-  mouth(250,250);
+  beak(250,250);
 }
 
 function draw() { 
-  fill(255, 0, 0);
-  text("("+mouseX + ", " + mouseY+")", 5, 15);
 }
 
 function eyes(x,y) {
@@ -28,9 +26,13 @@ circle(x-50, y-52, 5)
 circle(x+50, y-52, 5)
 }
 
-function mouth(x,y){
-  fill("white")
+function beak(x,y){
+fill("yellow")
 arc(x, y, 150, 85, 0, PI )
-  fill("black")
 line(x,y+25,x-75,y)
+line(x+75,y,x-75,y)
+line(x,y+25,x+75,y)
+fill("black")
+ellipse(x-25,y+10,5,10)
+ellipse(x+25,y+10,5,10)
 }
