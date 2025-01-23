@@ -8,6 +8,7 @@ function setup() {
     
     
     eyes(250,250);
+    beak(350,350);
   }
   
   function draw() {
@@ -29,7 +30,13 @@ function setup() {
   circle(x+45, y-52, 5)
   }
   
-  
+  function beak(x,y){
+  fill("yellow")
+  arc(x, y, 150, 85, 0, PI )
+  line(x,y+25,x-75,y)
+  line(x+75,y,x-75,y)
+  line(x,y+25,x+75,y)
+  fill("black")
   
  
-  
+  }
